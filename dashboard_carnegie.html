@@ -10,14 +10,12 @@
 body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif}
 .header{background:#12151f;border-bottom:2px solid var(--lime);padding:16px 40px;display:flex;align-items:center;gap:20px}
 .header img{height:34px;filter:brightness(0) invert(1);opacity:.92}
-.header-right{margin-left:auto;text-align:right}
 .hero{background:linear-gradient(135deg,#12151f,#1a1d27);border-bottom:1px solid var(--border);padding:28px 40px;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
-.hero-stat{text-align:center;padding:0 20px;border-right:1px solid var(--border)}
+.hero-stat{text-align:center;padding:0 18px;border-right:1px solid var(--border)}
 .hero-stat:last-child{border:none}
 .hero-num{font-size:40px;font-weight:900;letter-spacing:-2px;line-height:1;margin-bottom:4px}
 .hero-label{font-size:11px;color:var(--muted);line-height:1.5}
 .hero-label b{color:var(--text);display:block;font-size:12px;margin-bottom:1px}
-/* TABS */
 .tabs-bar{background:#12151f;border-bottom:1px solid var(--border);padding:0 40px;display:flex;gap:0}
 .tab-btn{padding:14px 24px;font-size:13px;font-weight:600;color:var(--muted);border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;transition:.15s}
 .tab-btn.active{color:var(--lime);border-bottom-color:var(--lime)}
@@ -29,17 +27,15 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-s
 .section-header h2{font-size:16px;font-weight:700}
 .section-header p{font-size:12px;color:var(--muted);margin-top:3px}
 .top-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
-.top-card{background:#1e2235;border:1px solid;border-radius:14px;padding:18px;position:relative;overflow:hidden}
-.top-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime)}
+.top-card{background:#1e2235;border:1px solid;border-radius:14px;padding:18px}
 .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px}
+.space-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
+.space-card{background:#1e2235;border:1px solid var(--border);border-radius:14px;padding:20px}
 .legend{display:flex;gap:20px;margin-bottom:14px;font-size:12px;color:var(--muted)}
-.legend span{display:flex;align-items:center;gap:5px}
 table{width:100%;border-collapse:collapse}
 th{font-size:11px;color:var(--muted);text-align:left;padding:0 10px 10px;font-weight:500;border-bottom:1px solid var(--border);white-space:nowrap}
 td{font-size:13px;padding:8px 10px;border-bottom:1px solid #181b28}
 tr:hover td{background:#1e2235}
-.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}
-.course-card{background:#12151f;border:1px solid var(--border);border-radius:12px;padding:18px}
 .cta-section{background:linear-gradient(135deg,#1a1d27,#12151f);border:1px solid var(--border);border-radius:20px;padding:32px 40px;margin-top:8px}
 .cta-section h2{font-size:20px;font-weight:800;color:var(--lime);margin-bottom:6px}
 .cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
@@ -57,93 +53,74 @@ tr:hover td{background:#1e2235}
     <div style="font-size:17px;font-weight:800;color:var(--lime)">Club Carnegie</div>
     <div style="font-size:11px;color:var(--muted)">Dashboard da Comunidade</div>
   </div>
-  <div class="header-right">
+  <div style="margin-left:auto;text-align:right">
     <div style="font-size:12px;color:var(--lime);font-weight:600;margin-bottom:2px">Panorama Nacional</div>
     <div style="font-size:11px;color:var(--muted)">Atualizado em 01/07/2026</div>
   </div>
 </div>
 
 <div class="hero">
-  <div class="hero-stat">
-    <div class="hero-num" style="color:var(--lime)">2,345</div>
-    <div class="hero-label"><b>Membros</b>na comunidade</div>
-  </div>
-  <div class="hero-stat">
-    <div class="hero-num" style="color:#4f7cff">255</div>
-    <div class="hero-label"><b>Ativos 30d</b>10.9% do total</div>
-  </div>
-  <div class="hero-stat">
-    <div class="hero-num" style="color:#a855f7">597</div>
-    <div class="hero-label"><b>Ativos 90d</b>0% do total</div>
-  </div>
-  <div class="hero-stat">
-    <div class="hero-num" style="color:#22c55e">943</div>
-    <div class="hero-label"><b>Acessos YTD 2026</b>40.2% acessaram este ano</div>
-  </div>
-  <div class="hero-stat">
-    <div class="hero-num" style="color:#f59e0b">+41</div>
-    <div class="hero-label"><b>Novos (30d)</b>crescimento da base</div>
-  </div>
+  <div class="hero-stat"><div class="hero-num" style="color:var(--lime)">2,345</div><div class="hero-label"><b>Membros</b>na comunidade</div></div>
+  <div class="hero-stat"><div class="hero-num" style="color:#4f7cff">255</div><div class="hero-label"><b>Ativos 30d</b>10.9% do total</div></div>
+  <div class="hero-stat"><div class="hero-num" style="color:#a855f7">597</div><div class="hero-label"><b>Ativos 90d</b>25.5% do total</div></div>
+  <div class="hero-stat"><div class="hero-num" style="color:#22c55e">943</div><div class="hero-label"><b>YTD 2026</b>40.2% acessaram este ano</div></div>
+  <div class="hero-stat"><div class="hero-num" style="color:#f59e0b">+41</div><div class="hero-label"><b>Novos (30d)</b>crescimento da base</div></div>
 </div>
 
 <div class="tabs-bar">
   <button class="tab-btn active" onclick="showTab('ranking',this)">📍 Ranking por Unidade</button>
-  <button class="tab-btn" onclick="showTab('cursos',this)">📚 Adesão por Curso</button>
+  <button class="tab-btn" onclick="showTab('conteudo',this)">📚 Central de Conteúdos</button>
 </div>
 
-<!-- ABA 1: RANKING -->
+<!-- ABA 1 -->
 <div id="tab-ranking" class="tab-pane active">
 <div class="container">
   <div class="insight">
-    <strong>📊 Como ler:</strong> Classificação <strong>🟢 Destaque</strong> ≥20% ativos · <strong>🟡 Atenção</strong> 10–19% · <strong>🔴 Crítico</strong> &lt;10%.
+    <strong>📊 Como ler:</strong> 🟢 Destaque ≥20% ativos · 🟡 Atenção 10–19% · 🔴 Crítico &lt;10%.
     Média nacional: <strong>10.9%</strong> (30d) · <strong>40.2%</strong> acessaram em 2026.
-    Londrina, por exemplo, tem <strong>23% de engajamento</strong> nos últimos 30 dias — acima da média nacional.
+    <strong>Londrina está em 4º lugar</strong> com 23% de engajamento — acima da média nacional.
   </div>
-
-  <div class="section-header">
-    <h2>🏆 Top 4 — Maior Engajamento Nacional</h2>
-    <p>% de membros ativos nos últimos 30 dias</p>
-  </div>
+  <div class="section-header"><h2>🏆 Top 4 — Maior Engajamento Nacional</h2><p>% de membros ativos nos últimos 30 dias</p></div>
   <div class="top-grid"><div class="top-card" style="border-color:#22c55e55">
       <div style="font-size:10px;font-weight:700;color:#22c55e;letter-spacing:.5px;margin-bottom:8px">#1 DESTAQUE NACIONAL</div>
       <div style="font-size:20px;font-weight:800;margin-bottom:4px">AntonioPrado</div>
       <div style="font-size:46px;font-weight:900;color:#22c55e;letter-spacing:-2px;line-height:1">100%</div>
       <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px;margin-top:2px">ativos últimos 30 dias</div>
-      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px"><div style="background:#22c55e;height:5px;border-radius:4px;width:100%"></div></div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px">
+        <div style="background:#22c55e;height:5px;border-radius:4px;width:100%"></div>
+      </div>
       <div style="font-size:11px;color:#8b8fa8">6 ativos · 6 total · 6 em 2026</div>
     </div><div class="top-card" style="border-color:#22c55e55">
       <div style="font-size:10px;font-weight:700;color:#22c55e;letter-spacing:.5px;margin-bottom:8px">#2 DESTAQUE NACIONAL</div>
       <div style="font-size:20px;font-weight:800;margin-bottom:4px">NovoHamburgo</div>
       <div style="font-size:46px;font-weight:900;color:#22c55e;letter-spacing:-2px;line-height:1">61%</div>
       <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px;margin-top:2px">ativos últimos 30 dias</div>
-      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px"><div style="background:#22c55e;height:5px;border-radius:4px;width:61%"></div></div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px">
+        <div style="background:#22c55e;height:5px;border-radius:4px;width:61%"></div>
+      </div>
       <div style="font-size:11px;color:#8b8fa8">14 ativos · 23 total · 17 em 2026</div>
     </div><div class="top-card" style="border-color:#22c55e55">
       <div style="font-size:10px;font-weight:700;color:#22c55e;letter-spacing:.5px;margin-bottom:8px">#3 DESTAQUE NACIONAL</div>
       <div style="font-size:20px;font-weight:800;margin-bottom:4px">Bahia</div>
       <div style="font-size:46px;font-weight:900;color:#22c55e;letter-spacing:-2px;line-height:1">50%</div>
       <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px;margin-top:2px">ativos últimos 30 dias</div>
-      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px"><div style="background:#22c55e;height:5px;border-radius:4px;width:50%"></div></div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px">
+        <div style="background:#22c55e;height:5px;border-radius:4px;width:50%"></div>
+      </div>
       <div style="font-size:11px;color:#8b8fa8">4 ativos · 8 total · 8 em 2026</div>
     </div><div class="top-card" style="border-color:#22c55e55">
       <div style="font-size:10px;font-weight:700;color:#22c55e;letter-spacing:.5px;margin-bottom:8px">#4 DESTAQUE NACIONAL</div>
       <div style="font-size:20px;font-weight:800;margin-bottom:4px">Sorocaba</div>
       <div style="font-size:46px;font-weight:900;color:#22c55e;letter-spacing:-2px;line-height:1">44%</div>
       <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px;margin-top:2px">ativos últimos 30 dias</div>
-      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px"><div style="background:#22c55e;height:5px;border-radius:4px;width:44%"></div></div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:8px">
+        <div style="background:#22c55e;height:5px;border-radius:4px;width:44%"></div>
+      </div>
       <div style="font-size:11px;color:#8b8fa8">4 ativos · 9 total · 9 em 2026</div>
     </div></div>
-
   <div class="card">
-    <div class="section-header">
-      <h2>📍 Ranking Completo — 49 Unidades</h2>
-      <p>Ordenado por % ativo (30d) · mínimo 5 membros</p>
-    </div>
-    <div class="legend">
-      <span>🟢 Destaque (≥20%)</span>
-      <span>🟡 Atenção (10–19%)</span>
-      <span>🔴 Crítico (&lt;10%)</span>
-    </div>
+    <div class="section-header"><h2>📍 Ranking Completo — 49 Unidades</h2><p>Ordenado por % ativo 30d · mínimo 5 membros</p></div>
+    <div class="legend"><span>🟢 Destaque (≥20%)</span><span>🟡 Atenção (10–19%)</span><span>🔴 Crítico (&lt;10%)</span></div>
     <table>
       <thead><tr>
         <th style="text-align:center">#</th><th>Unidade</th><th style="text-align:center">Total</th>
@@ -156,7 +133,7 @@ tr:hover td{background:#1e2235}
       <td><strong>AntonioPrado</strong></td>
       <td style="text-align:center;color:#8b8fa8">6</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">100%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">100%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">6</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+6</td>
@@ -166,7 +143,7 @@ tr:hover td{background:#1e2235}
       <td><strong>NovoHamburgo</strong></td>
       <td style="text-align:center;color:#8b8fa8">23</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span> <span style="font-size:10px;color:#8b8fa8">(61%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">70%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">70%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">17</span> <span style="font-size:10px;color:#8b8fa8">(74%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -176,7 +153,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Bahia</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">4</span> <span style="font-size:10px;color:#8b8fa8">(50%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">100%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">100%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">8</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+1</td>
@@ -186,7 +163,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Sorocaba</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">4</span> <span style="font-size:10px;color:#8b8fa8">(44%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">100%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">100%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">9</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+0</td>
@@ -196,7 +173,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Pelotas</strong></td>
       <td style="text-align:center;color:#8b8fa8">22</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span> <span style="font-size:10px;color:#8b8fa8">(36%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">41%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">41%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">10</span> <span style="font-size:10px;color:#8b8fa8">(45%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+7</td>
@@ -206,7 +183,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Tramandai</strong></td>
       <td style="text-align:center;color:#8b8fa8">25</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span> <span style="font-size:10px;color:#8b8fa8">(24%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">64%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">64%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">20</span> <span style="font-size:10px;color:#8b8fa8">(80%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -216,7 +193,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Londrina</strong></td>
       <td style="text-align:center;color:#8b8fa8">71</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span> <span style="font-size:10px;color:#8b8fa8">(23%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">34%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">34%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">45</span> <span style="font-size:10px;color:#8b8fa8">(63%)</span></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
       <td style="text-align:center">+4</td>
@@ -226,7 +203,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Ijuí</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span> <span style="font-size:10px;color:#8b8fa8">(22%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">44%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">44%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">7</span> <span style="font-size:10px;color:#8b8fa8">(78%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -236,7 +213,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Curitiba</strong></td>
       <td style="text-align:center;color:#8b8fa8">61</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span> <span style="font-size:10px;color:#8b8fa8">(21%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">31%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">31%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">33</span> <span style="font-size:10px;color:#8b8fa8">(54%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+0</td>
@@ -246,7 +223,7 @@ tr:hover td{background:#1e2235}
       <td><strong>RiodeJaneiro</strong></td>
       <td style="text-align:center;color:#8b8fa8">79</td>
       <td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span> <span style="font-size:10px;color:#8b8fa8">(20%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">48%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">48%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">51</span> <span style="font-size:10px;color:#8b8fa8">(65%)</span></td>
       <td style="text-align:center;color:#8b8fa8">7</td>
       <td style="text-align:center">+0</td>
@@ -256,7 +233,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Guarapuava</strong></td>
       <td style="text-align:center;color:#8b8fa8">31</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">6</span> <span style="font-size:10px;color:#8b8fa8">(19%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">39%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">39%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">17</span> <span style="font-size:10px;color:#8b8fa8">(55%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -266,7 +243,7 @@ tr:hover td{background:#1e2235}
       <td><strong>PassoFundo</strong></td>
       <td style="text-align:center;color:#8b8fa8">42</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">8</span> <span style="font-size:10px;color:#8b8fa8">(19%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">26%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">26%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">15</span> <span style="font-size:10px;color:#8b8fa8">(36%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+5</td>
@@ -276,7 +253,7 @@ tr:hover td{background:#1e2235}
       <td><strong>DoisVizinhos</strong></td>
       <td style="text-align:center;color:#8b8fa8">11</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">2</span> <span style="font-size:10px;color:#8b8fa8">(18%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">45%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">45%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">6</span> <span style="font-size:10px;color:#8b8fa8">(55%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -286,7 +263,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Indaiatuba</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">5</span> <span style="font-size:10px;color:#8b8fa8">(18%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">39%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">39%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">21</span> <span style="font-size:10px;color:#8b8fa8">(75%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+0</td>
@@ -296,7 +273,7 @@ tr:hover td{background:#1e2235}
       <td><strong>FozDoIguaçu</strong></td>
       <td style="text-align:center;color:#8b8fa8">47</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">8</span> <span style="font-size:10px;color:#8b8fa8">(17%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">36%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">36%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">24</span> <span style="font-size:10px;color:#8b8fa8">(51%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+0</td>
@@ -306,7 +283,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Veranopolis</strong></td>
       <td style="text-align:center;color:#8b8fa8">26</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">4</span> <span style="font-size:10px;color:#8b8fa8">(15%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">38%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">38%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">15</span> <span style="font-size:10px;color:#8b8fa8">(58%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -316,7 +293,7 @@ tr:hover td{background:#1e2235}
       <td><strong>JoãoPessoa</strong></td>
       <td style="text-align:center;color:#8b8fa8">27</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">4</span> <span style="font-size:10px;color:#8b8fa8">(15%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">15%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">15%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">7</span> <span style="font-size:10px;color:#8b8fa8">(26%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -326,7 +303,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SJRIOPRETO</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">4</span> <span style="font-size:10px;color:#8b8fa8">(14%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">32%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">32%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">15</span> <span style="font-size:10px;color:#8b8fa8">(54%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+2</td>
@@ -336,7 +313,7 @@ tr:hover td{background:#1e2235}
       <td><strong>FredericoWestphalen</strong></td>
       <td style="text-align:center;color:#8b8fa8">22</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">3</span> <span style="font-size:10px;color:#8b8fa8">(14%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">32%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">32%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">10</span> <span style="font-size:10px;color:#8b8fa8">(45%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+3</td>
@@ -346,7 +323,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Campinas</strong></td>
       <td style="text-align:center;color:#8b8fa8">69</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">9</span> <span style="font-size:10px;color:#8b8fa8">(13%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">28%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">28%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">35</span> <span style="font-size:10px;color:#8b8fa8">(51%)</span></td>
       <td style="text-align:center;color:#8b8fa8">3</td>
       <td style="text-align:center">+0</td>
@@ -356,7 +333,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Medianeira</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">1</span> <span style="font-size:10px;color:#8b8fa8">(12%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">75%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">75%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">8</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -366,7 +343,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Paranavai</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">1</span> <span style="font-size:10px;color:#8b8fa8">(12%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">25%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">25%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">2</span> <span style="font-size:10px;color:#8b8fa8">(25%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -376,7 +353,7 @@ tr:hover td{background:#1e2235}
       <td><strong>PatoBranco</strong></td>
       <td style="text-align:center;color:#8b8fa8">73</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">9</span> <span style="font-size:10px;color:#8b8fa8">(12%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">34%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">34%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">38</span> <span style="font-size:10px;color:#8b8fa8">(52%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -386,7 +363,7 @@ tr:hover td{background:#1e2235}
       <td><strong>CaxiasDoSul</strong></td>
       <td style="text-align:center;color:#8b8fa8">51</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">6</span> <span style="font-size:10px;color:#8b8fa8">(12%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">57%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">57%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">32</span> <span style="font-size:10px;color:#8b8fa8">(63%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -396,7 +373,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SãoPaulo</strong></td>
       <td style="text-align:center;color:#8b8fa8">116</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">12</span> <span style="font-size:10px;color:#8b8fa8">(10%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">28%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">28%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">52</span> <span style="font-size:10px;color:#8b8fa8">(45%)</span></td>
       <td style="text-align:center;color:#8b8fa8">4</td>
       <td style="text-align:center">+0</td>
@@ -406,7 +383,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Cianorte</strong></td>
       <td style="text-align:center;color:#8b8fa8">40</td>
       <td style="text-align:center"><span style="font-weight:700;color:#f59e0b">4</span> <span style="font-size:10px;color:#8b8fa8">(10%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">32%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">32%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">17</span> <span style="font-size:10px;color:#8b8fa8">(42%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -416,7 +393,7 @@ tr:hover td{background:#1e2235}
       <td><strong>PortoAlegre</strong></td>
       <td style="text-align:center;color:#8b8fa8">82</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">7</span> <span style="font-size:10px;color:#8b8fa8">(9%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">24%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">24%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">37</span> <span style="font-size:10px;color:#8b8fa8">(45%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+3</td>
@@ -426,7 +403,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SantaCruzdoSul</strong></td>
       <td style="text-align:center;color:#8b8fa8">38</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">3</span> <span style="font-size:10px;color:#8b8fa8">(8%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">18%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">18%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">17</span> <span style="font-size:10px;color:#8b8fa8">(45%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -436,7 +413,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Umuarama</strong></td>
       <td style="text-align:center;color:#8b8fa8">27</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">2</span> <span style="font-size:10px;color:#8b8fa8">(7%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">26%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">26%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">15</span> <span style="font-size:10px;color:#8b8fa8">(56%)</span></td>
       <td style="text-align:center;color:#8b8fa8">2</td>
       <td style="text-align:center">+0</td>
@@ -446,7 +423,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Cascavel</strong></td>
       <td style="text-align:center;color:#8b8fa8">20</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">1</span> <span style="font-size:10px;color:#8b8fa8">(5%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">10%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">10%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">5</span> <span style="font-size:10px;color:#8b8fa8">(25%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -456,7 +433,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Lajeado</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">1</span> <span style="font-size:10px;color:#8b8fa8">(4%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">18%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">18%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">6</span> <span style="font-size:10px;color:#8b8fa8">(21%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -466,7 +443,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Maringá</strong></td>
       <td style="text-align:center;color:#8b8fa8">92</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">3</span> <span style="font-size:10px;color:#8b8fa8">(3%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">25%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">25%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">56</span> <span style="font-size:10px;color:#8b8fa8">(61%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -476,7 +453,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Fortaleza</strong></td>
       <td style="text-align:center;color:#8b8fa8">32</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">1</span> <span style="font-size:10px;color:#8b8fa8">(3%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">25%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">25%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">12</span> <span style="font-size:10px;color:#8b8fa8">(38%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -486,7 +463,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Sarandi</strong></td>
       <td style="text-align:center;color:#8b8fa8">16</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">25%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">25%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">7</span> <span style="font-size:10px;color:#8b8fa8">(44%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -496,7 +473,7 @@ tr:hover td{background:#1e2235}
       <td><strong>BentoGonçalves</strong></td>
       <td style="text-align:center;color:#8b8fa8">21</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">19%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">19%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">4</span> <span style="font-size:10px;color:#8b8fa8">(19%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -506,7 +483,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SantaRosa</strong></td>
       <td style="text-align:center;color:#8b8fa8">15</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">53%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">53%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">12</span> <span style="font-size:10px;color:#8b8fa8">(80%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -516,7 +493,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Aracaju</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">12%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">12%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">8</span> <span style="font-size:10px;color:#8b8fa8">(100%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -526,7 +503,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SãoBorja</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">25%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">25%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">3</span> <span style="font-size:10px;color:#8b8fa8">(38%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -536,7 +513,7 @@ tr:hover td{background:#1e2235}
       <td><strong>FranciscoBeltrão</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">38%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">38%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">5</span> <span style="font-size:10px;color:#8b8fa8">(62%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -546,7 +523,7 @@ tr:hover td{background:#1e2235}
       <td><strong>RibeirãoPreto</strong></td>
       <td style="text-align:center;color:#8b8fa8">7</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">1</span> <span style="font-size:10px;color:#8b8fa8">(14%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -556,7 +533,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Piracicaba</strong></td>
       <td style="text-align:center;color:#8b8fa8">17</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">24%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">24%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">5</span> <span style="font-size:10px;color:#8b8fa8">(29%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -566,7 +543,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Recife</strong></td>
       <td style="text-align:center;color:#8b8fa8">19</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">1</span> <span style="font-size:10px;color:#8b8fa8">(5%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -576,7 +553,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SãoLuizGonzaga</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -586,7 +563,7 @@ tr:hover td{background:#1e2235}
       <td><strong>SerafinaCorrea</strong></td>
       <td style="text-align:center;color:#8b8fa8">12</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">8%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">8%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">1</span> <span style="font-size:10px;color:#8b8fa8">(8%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -596,7 +573,7 @@ tr:hover td{background:#1e2235}
       <td><strong>CampoNovo</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -606,7 +583,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Cremers</strong></td>
       <td style="text-align:center;color:#8b8fa8">13</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -616,7 +593,7 @@ tr:hover td{background:#1e2235}
       <td><strong>Osório</strong></td>
       <td style="text-align:center;color:#8b8fa8">15</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">7%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">7%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">1</span> <span style="font-size:10px;color:#8b8fa8">(7%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -626,7 +603,7 @@ tr:hover td{background:#1e2235}
       <td><strong>CampoMourão</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
       <td style="text-align:center;color:#8b8fa8">0</td>
       <td style="text-align:center">+0</td>
@@ -636,7 +613,7 @@ tr:hover td{background:#1e2235}
       <td><strong>VitóriaDeSantoAntão</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
       <td style="text-align:center"><span style="font-weight:700;color:#ef4444">0</span> <span style="font-size:10px;color:#8b8fa8">(0%)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0%</td>
+      <td style="text-align:center;color:#8b8fa8;font-size:12px">0%</td>
       <td style="text-align:center"><span style="font-weight:600;color:#4f7cff">1</span> <span style="font-size:10px;color:#8b8fa8">(20%)</span></td>
       <td style="text-align:center;color:#8b8fa8">1</td>
       <td style="text-align:center">+0</td>
@@ -644,379 +621,297 @@ tr:hover td{background:#1e2235}
     </tr></tbody>
     </table>
   </div>
-
   <div class="cta-section">
     <div style="display:inline-flex;align-items:center;gap:6px;background:#c8e84b18;border:1px solid #c8e84b44;border-radius:20px;padding:3px 12px;font-size:11px;color:var(--lime);font-weight:600;margin-bottom:14px">💡 O que fazer com isso?</div>
     <h2>O Club Carnegie é um ativo estratégico.</h2>
     <p style="font-size:13px;color:var(--muted);margin-top:5px">Transforme os dados em resultado real para sua sublicenciada.</p>
     <div class="cta-grid">
-      <div class="cta-item"><div class="icon">🎯</div><h4>Engaje os inativos</h4><p>Mais de 80% dos membros não acessam regularmente. Uma mensagem personalizada pode reativar centenas de alunos e fortalecer o relacionamento pós-curso.</p></div>
-      <div class="cta-item"><div class="icon">💬</div><h4>Crie conteúdo recorrente</h4><p>Posts semanais com dicas, desafios e cases da metodologia Carnegie aumentam o engajamento e mantêm a marca presente no dia a dia.</p></div>
-      <div class="cta-item"><div class="icon">🏅</div><h4>Reconheça os ativos</h4><p>Destaque publicamente os membros mais engajados. Reconhecimento gera pertencimento — e pertencimento gera renovações, indicações e novas turmas.</p></div>
-      <div class="cta-item"><div class="icon">📣</div><h4>Use como canal de vendas</h4><p>O Club é a maior base qualificada. Anuncie novas turmas, workshops e eventos exclusivamente para membros — a conversão é muito maior que cold outreach.</p></div>
-      <div class="cta-item"><div class="icon">🤝</div><h4>Promova networking</h4><p>Encontros temáticos para membros da comunidade criam vínculo. O aluno que se conecta com outros não abandona — ele indica.</p></div>
-      <div class="cta-item"><div class="icon">📈</div><h4>Acompanhe a evolução</h4><p>Dashboard atualizado semanalmente. Use os dados para definir metas por unidade e apresentar resultados concretos para sua equipe.</p></div>
+      <div class="cta-item"><div class="icon">🎯</div><h4>Engaje os inativos</h4><p>Mais de 80% dos membros não acessam regularmente. Uma mensagem personalizada pode reativar centenas de alunos.</p></div>
+      <div class="cta-item"><div class="icon">💬</div><h4>Crie conteúdo recorrente</h4><p>Posts semanais com dicas e cases da metodologia Carnegie aumentam o engajamento e mantêm a marca presente.</p></div>
+      <div class="cta-item"><div class="icon">🏅</div><h4>Reconheça os ativos</h4><p>Destaque publicamente os membros mais engajados. Reconhecimento gera pertencimento e novas turmas.</p></div>
+      <div class="cta-item"><div class="icon">📣</div><h4>Use como canal de vendas</h4><p>O Club é a maior base qualificada. Anuncie novas turmas exclusivamente para membros — conversão muito maior.</p></div>
+      <div class="cta-item"><div class="icon">🤝</div><h4>Promova networking</h4><p>Encontros temáticos para membros criam vínculo. O aluno que se conecta com outros não abandona — ele indica.</p></div>
+      <div class="cta-item"><div class="icon">📈</div><h4>Acompanhe a evolução</h4><p>Dashboard atualizado semanalmente. Use para definir metas por unidade e apresentar resultados à sua equipe.</p></div>
     </div>
   </div>
 </div>
 </div>
 
-<!-- ABA 2: CURSOS -->
-<div id="tab-cursos" class="tab-pane">
+<!-- ABA 2: CENTRAL DE CONTEÚDOS -->
+<div id="tab-conteudo" class="tab-pane">
 <div class="container">
   <div class="insight">
-    <strong>📚 Adesão por Curso:</strong> Mostra quantos membros de cada unidade estão inscritos em cada programa, e qual % permanece ativo nos últimos 30 dias.
-    <strong>⭐ ExclusivoDCC</strong> = membros com acesso exclusivo ao conteúdo premium.
-    O % ativo dentro do curso indica a <strong>aderência real ao conteúdo</strong> — abaixo de 10% é sinal de drop silencioso.
+    <strong>📚 Central de Conteúdos:</strong> Mostra quantos membros de cada unidade têm acesso ativo em cada área da comunidade.
+    <strong>↓ drops</strong> = membros que perderam acesso (cancelaram ou foram removidos).
+    O <strong>DCC Exclusivo</strong> tem menor base (3,105 inscritos) mas maior taxa de retenção — são os alunos mais comprometidos.
+    <br>Na tabela: <strong>ativo/total</strong> · ↓N = número de drops naquela unidade.
   </div>
 
-  <div class="section-header">
-    <h2>📊 Visão Geral dos Programas</h2>
-    <p>Total de membros ativos inscritos em cada curso</p>
-  </div>
-  <div class="course-grid"><div class="course-card">
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Dale Carnegie Course</div>
-      <div style="font-size:36px;font-weight:900;color:#e8eaf0;letter-spacing:-1px">1,211</div>
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px">inscritos (membros atuais)</div>
-      <div style="display:flex;gap:12px;font-size:11px">
-        <span style="color:#22c55e">✓ 186 ativos 30d (15%)</span>
-        <span style="color:#ef4444">↓ 771 inativos</span>
+  <div class="section-header"><h2>📊 Visão Geral — Central de Conteúdos</h2><p>Acesso ativo × drops por área</p></div>
+  <div class="space-grid"><div class="space-card" style="border-top:3px solid #4f7cff">
+      <div style="font-size:24px;margin-bottom:10px">📅</div>
+      <div style="font-size:13px;font-weight:700;color:#e8eaf0;margin-bottom:3px">Aulas Semanais</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:14px">Conteúdo semanal da comunidade</div>
+      <div style="font-size:36px;font-weight:900;color:#4f7cff;letter-spacing:-1px;line-height:1">1,455</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:10px">com acesso ativo (26%)</div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:10px">
+        <div style="background:#4f7cff;height:5px;border-radius:4px;width:26%"></div>
       </div>
-    </div><div class="course-card">
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Liderança p/ Equipes</div>
-      <div style="font-size:36px;font-weight:900;color:#e8eaf0;letter-spacing:-1px">1,211</div>
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px">inscritos (membros atuais)</div>
-      <div style="display:flex;gap:12px;font-size:11px">
-        <span style="color:#22c55e">✓ 186 ativos 30d (15%)</span>
-        <span style="color:#ef4444">↓ 771 inativos</span>
+      <div style="display:flex;justify-content:space-between;font-size:11px">
+        <span style="color:#22c55e">✓ 1,455 ativos</span>
+        <span style="color:#ef4444">↓ 4,066 drops (74%)</span>
       </div>
-    </div><div class="course-card">
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Comunicação e RH</div>
-      <div style="font-size:36px;font-weight:900;color:#e8eaf0;letter-spacing:-1px">1,211</div>
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px">inscritos (membros atuais)</div>
-      <div style="display:flex;gap:12px;font-size:11px">
-        <span style="color:#22c55e">✓ 186 ativos 30d (15%)</span>
-        <span style="color:#ef4444">↓ 771 inativos</span>
+    </div><div class="space-card" style="border-top:3px solid #f59e0b">
+      <div style="font-size:24px;margin-bottom:10px">⚡</div>
+      <div style="font-size:13px;font-weight:700;color:#e8eaf0;margin-bottom:3px">Drops Dale Carnegie</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:14px">Pílulas rápidas de conhecimento</div>
+      <div style="font-size:36px;font-weight:900;color:#f59e0b;letter-spacing:-1px;line-height:1">1,456</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:10px">com acesso ativo (26%)</div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:10px">
+        <div style="background:#f59e0b;height:5px;border-radius:4px;width:26%"></div>
       </div>
-    </div><div class="course-card">
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Vendas</div>
-      <div style="font-size:36px;font-weight:900;color:#e8eaf0;letter-spacing:-1px">1,348</div>
-      <div style="font-size:11px;color:#8b8fa8;margin-bottom:12px">inscritos (membros atuais)</div>
-      <div style="display:flex;gap:12px;font-size:11px">
-        <span style="color:#22c55e">✓ 134 ativos 30d (10%)</span>
-        <span style="color:#ef4444">↓ 978 inativos</span>
+      <div style="display:flex;justify-content:space-between;font-size:11px">
+        <span style="color:#22c55e">✓ 1,456 ativos</span>
+        <span style="color:#ef4444">↓ 4,069 drops (74%)</span>
+      </div>
+    </div><div class="space-card" style="border-top:3px solid #a855f7">
+      <div style="font-size:24px;margin-bottom:10px">🎁</div>
+      <div style="font-size:13px;font-weight:700;color:#e8eaf0;margin-bottom:3px">Bônus</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:14px">Conteúdo extra e materiais</div>
+      <div style="font-size:36px;font-weight:900;color:#a855f7;letter-spacing:-1px;line-height:1">1,455</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:10px">com acesso ativo (26%)</div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:10px">
+        <div style="background:#a855f7;height:5px;border-radius:4px;width:26%"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px">
+        <span style="color:#22c55e">✓ 1,455 ativos</span>
+        <span style="color:#ef4444">↓ 4,066 drops (74%)</span>
+      </div>
+    </div><div class="space-card" style="border-top:3px solid #c8e84b">
+      <div style="font-size:24px;margin-bottom:10px">⭐</div>
+      <div style="font-size:13px;font-weight:700;color:#e8eaf0;margin-bottom:3px">DCC Exclusivo</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:14px">Acesso exclusivo participantes DCC</div>
+      <div style="font-size:36px;font-weight:900;color:#c8e84b;letter-spacing:-1px;line-height:1">1,441</div>
+      <div style="font-size:11px;color:#8b8fa8;margin-bottom:10px">com acesso ativo (46%)</div>
+      <div style="background:#ffffff0d;border-radius:4px;height:5px;margin-bottom:10px">
+        <div style="background:#c8e84b;height:5px;border-radius:4px;width:46%"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:11px">
+        <span style="color:#22c55e">✓ 1,441 ativos</span>
+        <span style="color:#ef4444">↓ 1,664 drops (54%)</span>
       </div>
     </div></div>
 
   <div class="card">
     <div class="section-header">
-      <h2>📍 Adesão por Unidade × Curso</h2>
-      <p>Inscritos com % ativos (30d) em verde/amarelo/vermelho · ⭐ = possui membros ExclusivoDCC</p>
+      <h2>📍 Acesso por Unidade × Conteúdo</h2>
+      <p>Ativo/total inscritos · ↓N = drops naquela unidade · ordenado por total de membros</p>
     </div>
     <table>
       <thead><tr>
-        <th>Unidade</th><th style="text-align:center">Membros</th>
-        <th style="text-align:center">Dale Carnegie Course</th>
-        <th style="text-align:center">Liderança p/ Equipes</th>
-        <th style="text-align:center">Comunicação e RH</th>
-        <th style="text-align:center">Vendas</th>
-        <th style="text-align:center">⭐ Exclusivo</th>
-        <th style="text-align:center">Cancelamentos</th>
+        <th>Unidade</th>
+        <th style="text-align:center">Membros</th>
+        <th style="text-align:center">📅 Aulas Semanais</th>
+        <th style="text-align:center">⚡ Drops DC</th>
+        <th style="text-align:center">🎁 Bônus</th>
+        <th style="text-align:center">⭐ DCC Exclusivo</th>
       </tr></thead>
       <tbody><tr>
-      <td><strong>SãoPaulo</strong> </td>
+      <td><strong>SãoPaulo</strong></td>
       <td style="text-align:center;color:#8b8fa8">116</td>
-      <td style="text-align:center"><span style="font-weight:700">110</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td><td style="text-align:center"><span style="font-weight:700">110</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td><td style="text-align:center"><span style="font-weight:700">110</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td><td style="text-align:center"><span style="font-weight:700">107</span> <span style="font-size:10px;color:#ef4444">(6%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"><span style="color:#ef4444;font-size:10px">(1 cancel.)</span></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">110</span><span style="font-size:10px;color:#8b8fa8">/110</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">110</span><span style="font-size:10px;color:#8b8fa8">/110</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">110</span><span style="font-size:10px;color:#8b8fa8">/110</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">107</span><span style="font-size:10px;color:#8b8fa8">/107</span></td>
     </tr><tr>
-      <td><strong>Maringá</strong> </td>
+      <td><strong>Maringá</strong></td>
       <td style="text-align:center;color:#8b8fa8">92</td>
-      <td style="text-align:center"><span style="font-weight:700">79</span> <span style="font-size:10px;color:#ef4444">(4%✓)</span></td><td style="text-align:center"><span style="font-weight:700">79</span> <span style="font-size:10px;color:#ef4444">(4%✓)</span></td><td style="text-align:center"><span style="font-weight:700">79</span> <span style="font-size:10px;color:#ef4444">(4%✓)</span></td><td style="text-align:center"><span style="font-weight:700">92</span> <span style="font-size:10px;color:#ef4444">(3%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">79</span><span style="font-size:10px;color:#8b8fa8">/79</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">79</span><span style="font-size:10px;color:#8b8fa8">/79</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">79</span><span style="font-size:10px;color:#8b8fa8">/79</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">92</span><span style="font-size:10px;color:#8b8fa8">/92</span></td>
     </tr><tr>
-      <td><strong>PortoAlegre</strong> ⭐</td>
+      <td><strong>PortoAlegre</strong></td>
       <td style="text-align:center;color:#8b8fa8">82</td>
-      <td style="text-align:center"><span style="font-weight:700">67</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">67</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">67</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">82</span> <span style="font-size:10px;color:#ef4444">(9%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">3</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">67</span><span style="font-size:10px;color:#8b8fa8">/67</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">67</span><span style="font-size:10px;color:#8b8fa8">/67</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">67</span><span style="font-size:10px;color:#8b8fa8">/67</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">82</span><span style="font-size:10px;color:#8b8fa8">/82</span></td>
     </tr><tr>
-      <td><strong>PatoBranco</strong> </td>
+      <td><strong>PatoBranco</strong></td>
       <td style="text-align:center;color:#8b8fa8">73</td>
-      <td style="text-align:center"><span style="font-weight:700">64</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">64</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">64</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">72</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">64</span><span style="font-size:10px;color:#8b8fa8">/64</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">64</span><span style="font-size:10px;color:#8b8fa8">/64</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">64</span><span style="font-size:10px;color:#8b8fa8">/64</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">72</span><span style="font-size:10px;color:#8b8fa8">/72</span></td>
     </tr><tr>
-      <td><strong>RiodeJaneiro</strong> </td>
+      <td><strong>RiodeJaneiro</strong></td>
       <td style="text-align:center;color:#8b8fa8">79</td>
-      <td style="text-align:center"><span style="font-weight:700">62</span> <span style="font-size:10px;color:#22c55e">(26%✓)</span></td><td style="text-align:center"><span style="font-weight:700">62</span> <span style="font-size:10px;color:#22c55e">(26%✓)</span></td><td style="text-align:center"><span style="font-weight:700">62</span> <span style="font-size:10px;color:#22c55e">(26%✓)</span></td><td style="text-align:center"><span style="font-weight:700">76</span> <span style="font-size:10px;color:#22c55e">(21%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">62</span><span style="font-size:10px;color:#8b8fa8">/62</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">62</span><span style="font-size:10px;color:#8b8fa8">/62</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">62</span><span style="font-size:10px;color:#8b8fa8">/62</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">76</span><span style="font-size:10px;color:#8b8fa8">/76</span></td>
     </tr><tr>
-      <td><strong>Londrina</strong> ⭐</td>
+      <td><strong>Londrina</strong></td>
       <td style="text-align:center;color:#8b8fa8">71</td>
-      <td style="text-align:center"><span style="font-weight:700">63</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">63</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">63</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">71</span> <span style="font-size:10px;color:#22c55e">(23%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">1</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">63</span><span style="font-size:10px;color:#8b8fa8">/63</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">63</span><span style="font-size:10px;color:#8b8fa8">/63</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">63</span><span style="font-size:10px;color:#8b8fa8">/63</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">71</span><span style="font-size:10px;color:#8b8fa8">/71</span></td>
     </tr><tr>
-      <td><strong>Campinas</strong> </td>
+      <td><strong>Campinas</strong></td>
       <td style="text-align:center;color:#8b8fa8">69</td>
-      <td style="text-align:center"><span style="font-weight:700">59</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">59</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">59</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">64</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"><span style="color:#ef4444;font-size:10px">(1 cancel.)</span></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">59</span><span style="font-size:10px;color:#8b8fa8">/59</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">59</span><span style="font-size:10px;color:#8b8fa8">/59</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">59</span><span style="font-size:10px;color:#8b8fa8">/59</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">64</span><span style="font-size:10px;color:#8b8fa8">/64</span></td>
     </tr><tr>
-      <td><strong>CaxiasDoSul</strong> </td>
+      <td><strong>CaxiasDoSul</strong></td>
       <td style="text-align:center;color:#8b8fa8">51</td>
-      <td style="text-align:center"><span style="font-weight:700">50</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">50</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">50</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">51</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">50</span><span style="font-size:10px;color:#8b8fa8">/50</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">50</span><span style="font-size:10px;color:#8b8fa8">/50</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">50</span><span style="font-size:10px;color:#8b8fa8">/50</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">51</span><span style="font-size:10px;color:#8b8fa8">/51</span></td>
     </tr><tr>
-      <td><strong>Curitiba</strong> </td>
+      <td><strong>Curitiba</strong></td>
       <td style="text-align:center;color:#8b8fa8">61</td>
-      <td style="text-align:center"><span style="font-weight:700">41</span> <span style="font-size:10px;color:#22c55e">(32%✓)</span></td><td style="text-align:center"><span style="font-weight:700">41</span> <span style="font-size:10px;color:#22c55e">(32%✓)</span></td><td style="text-align:center"><span style="font-weight:700">41</span> <span style="font-size:10px;color:#22c55e">(32%✓)</span></td><td style="text-align:center"><span style="font-weight:700">52</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">41</span><span style="font-size:10px;color:#8b8fa8">/41</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">41</span><span style="font-size:10px;color:#8b8fa8">/41</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">41</span><span style="font-size:10px;color:#8b8fa8">/41</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">52</span><span style="font-size:10px;color:#8b8fa8">/52</span></td>
     </tr><tr>
-      <td><strong>FozDoIguaçu</strong> </td>
+      <td><strong>FozDoIguaçu</strong></td>
       <td style="text-align:center;color:#8b8fa8">47</td>
-      <td style="text-align:center"><span style="font-weight:700">42</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">42</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">42</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">41</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">42</span><span style="font-size:10px;color:#8b8fa8">/42</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">42</span><span style="font-size:10px;color:#8b8fa8">/42</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">42</span><span style="font-size:10px;color:#8b8fa8">/42</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">41</span><span style="font-size:10px;color:#8b8fa8">/41</span></td>
     </tr><tr>
-      <td><strong>Cianorte</strong> </td>
+      <td><strong>Cianorte</strong></td>
       <td style="text-align:center;color:#8b8fa8">40</td>
-      <td style="text-align:center"><span style="font-weight:700">34</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">34</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">34</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">38</span> <span style="font-size:10px;color:#f59e0b">(11%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">34</span><span style="font-size:10px;color:#8b8fa8">/34</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">34</span><span style="font-size:10px;color:#8b8fa8">/34</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">34</span><span style="font-size:10px;color:#8b8fa8">/34</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">38</span><span style="font-size:10px;color:#8b8fa8">/38</span></td>
     </tr><tr>
-      <td><strong>PassoFundo</strong> </td>
+      <td><strong>PassoFundo</strong></td>
       <td style="text-align:center;color:#8b8fa8">42</td>
-      <td style="text-align:center"><span style="font-weight:700">32</span> <span style="font-size:10px;color:#22c55e">(22%✓)</span></td><td style="text-align:center"><span style="font-weight:700">32</span> <span style="font-size:10px;color:#22c55e">(22%✓)</span></td><td style="text-align:center"><span style="font-weight:700">32</span> <span style="font-size:10px;color:#22c55e">(22%✓)</span></td><td style="text-align:center"><span style="font-weight:700">37</span> <span style="font-size:10px;color:#ef4444">(8%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">32</span><span style="font-size:10px;color:#8b8fa8">/32</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">32</span><span style="font-size:10px;color:#8b8fa8">/32</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">32</span><span style="font-size:10px;color:#8b8fa8">/32</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">37</span><span style="font-size:10px;color:#8b8fa8">/37</span></td>
     </tr><tr>
-      <td><strong>SantaCruzdoSul</strong> </td>
+      <td><strong>SantaCruzdoSul</strong></td>
       <td style="text-align:center;color:#8b8fa8">38</td>
-      <td style="text-align:center"><span style="font-weight:700">29</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">29</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">29</span> <span style="font-size:10px;color:#f59e0b">(10%✓)</span></td><td style="text-align:center"><span style="font-weight:700">38</span> <span style="font-size:10px;color:#ef4444">(8%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">29</span><span style="font-size:10px;color:#8b8fa8">/29</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">29</span><span style="font-size:10px;color:#8b8fa8">/29</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">29</span><span style="font-size:10px;color:#8b8fa8">/29</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">38</span><span style="font-size:10px;color:#8b8fa8">/38</span></td>
     </tr><tr>
-      <td><strong>Fortaleza</strong> </td>
+      <td><strong>Fortaleza</strong></td>
       <td style="text-align:center;color:#8b8fa8">32</td>
-      <td style="text-align:center"><span style="font-weight:700">31</span> <span style="font-size:10px;color:#ef4444">(3%✓)</span></td><td style="text-align:center"><span style="font-weight:700">31</span> <span style="font-size:10px;color:#ef4444">(3%✓)</span></td><td style="text-align:center"><span style="font-weight:700">31</span> <span style="font-size:10px;color:#ef4444">(3%✓)</span></td><td style="text-align:center"><span style="font-weight:700">32</span> <span style="font-size:10px;color:#ef4444">(3%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">31</span><span style="font-size:10px;color:#8b8fa8">/31</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">31</span><span style="font-size:10px;color:#8b8fa8">/31</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">31</span><span style="font-size:10px;color:#8b8fa8">/31</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">32</span><span style="font-size:10px;color:#8b8fa8">/32</span></td>
     </tr><tr>
-      <td><strong>Guarapuava</strong> </td>
+      <td><strong>Guarapuava</strong></td>
       <td style="text-align:center;color:#8b8fa8">31</td>
-      <td style="text-align:center"><span style="font-weight:700">27</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">27</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">27</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td><td style="text-align:center"><span style="font-weight:700">31</span> <span style="font-size:10px;color:#f59e0b">(19%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">27</span><span style="font-size:10px;color:#8b8fa8">/27</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">27</span><span style="font-size:10px;color:#8b8fa8">/27</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">27</span><span style="font-size:10px;color:#8b8fa8">/27</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">31</span><span style="font-size:10px;color:#8b8fa8">/31</span></td>
     </tr><tr>
-      <td><strong>Indaiatuba</strong> </td>
+      <td><strong>Indaiatuba</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
-      <td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(20%✓)</span></td><td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(20%✓)</span></td><td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(20%✓)</span></td><td style="text-align:center"><span style="font-weight:700">28</span> <span style="font-size:10px;color:#f59e0b">(18%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">28</span><span style="font-size:10px;color:#8b8fa8">/28</span></td>
     </tr><tr>
-      <td><strong>Umuarama</strong> </td>
+      <td><strong>Umuarama</strong></td>
       <td style="text-align:center;color:#8b8fa8">27</td>
-      <td style="text-align:center"><span style="font-weight:700">24</span> <span style="font-size:10px;color:#ef4444">(8%✓)</span></td><td style="text-align:center"><span style="font-weight:700">24</span> <span style="font-size:10px;color:#ef4444">(8%✓)</span></td><td style="text-align:center"><span style="font-weight:700">24</span> <span style="font-size:10px;color:#ef4444">(8%✓)</span></td><td style="text-align:center"><span style="font-weight:700">27</span> <span style="font-size:10px;color:#ef4444">(7%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">24</span><span style="font-size:10px;color:#8b8fa8">/24</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">24</span><span style="font-size:10px;color:#8b8fa8">/24</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">24</span><span style="font-size:10px;color:#8b8fa8">/24</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">27</span><span style="font-size:10px;color:#8b8fa8">/27</span></td>
     </tr><tr>
-      <td><strong>Veranopolis</strong> </td>
+      <td><strong>Veranopolis</strong></td>
       <td style="text-align:center;color:#8b8fa8">26</td>
-      <td style="text-align:center"><span style="font-weight:700">26</span> <span style="font-size:10px;color:#f59e0b">(15%✓)</span></td><td style="text-align:center"><span style="font-weight:700">26</span> <span style="font-size:10px;color:#f59e0b">(15%✓)</span></td><td style="text-align:center"><span style="font-weight:700">26</span> <span style="font-size:10px;color:#f59e0b">(15%✓)</span></td><td style="text-align:center"><span style="font-weight:700">20</span> <span style="font-size:10px;color:#ef4444">(5%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">26</span><span style="font-size:10px;color:#8b8fa8">/26</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">26</span><span style="font-size:10px;color:#8b8fa8">/26</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">26</span><span style="font-size:10px;color:#8b8fa8">/26</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">20</span><span style="font-size:10px;color:#8b8fa8">/20</span></td>
     </tr><tr>
-      <td><strong>SJRIOPRETO</strong> ⭐</td>
+      <td><strong>SJRIOPRETO</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
-      <td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(18%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(18%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(18%✓)</span></td><td style="text-align:center"><span style="font-weight:700">28</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">2</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">28</span><span style="font-size:10px;color:#8b8fa8">/28</span></td>
     </tr><tr>
-      <td><strong>Lajeado</strong> </td>
+      <td><strong>Lajeado</strong></td>
       <td style="text-align:center;color:#8b8fa8">28</td>
-      <td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#ef4444">(5%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#ef4444">(5%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#ef4444">(5%✓)</span></td><td style="text-align:center"><span style="font-weight:700">28</span> <span style="font-size:10px;color:#ef4444">(4%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">28</span><span style="font-size:10px;color:#8b8fa8">/28</span></td>
     </tr><tr>
-      <td><strong>JoãoPessoa</strong> </td>
+      <td><strong>JoãoPessoa</strong></td>
       <td style="text-align:center;color:#8b8fa8">27</td>
-      <td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td><td style="text-align:center"><span style="font-weight:700">27</span> <span style="font-size:10px;color:#f59e0b">(15%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">27</span><span style="font-size:10px;color:#8b8fa8">/27</span></td>
     </tr><tr>
-      <td><strong>Tramandai</strong> </td>
+      <td><strong>Tramandai</strong></td>
       <td style="text-align:center;color:#8b8fa8">25</td>
-      <td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(24%✓)</span></td><td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(24%✓)</span></td><td style="text-align:center"><span style="font-weight:700">25</span> <span style="font-size:10px;color:#22c55e">(24%✓)</span></td><td style="text-align:center"><span style="font-weight:700">10</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">25</span><span style="font-size:10px;color:#8b8fa8">/25</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">10</span><span style="font-size:10px;color:#8b8fa8">/10</span></td>
     </tr><tr>
-      <td><strong>FredericoWestphalen</strong> ⭐</td>
+      <td><strong>FredericoWestphalen</strong></td>
       <td style="text-align:center;color:#8b8fa8">22</td>
-      <td style="text-align:center"><span style="font-weight:700">19</span> <span style="font-size:10px;color:#f59e0b">(16%✓)</span></td><td style="text-align:center"><span style="font-weight:700">19</span> <span style="font-size:10px;color:#f59e0b">(16%✓)</span></td><td style="text-align:center"><span style="font-weight:700">19</span> <span style="font-size:10px;color:#f59e0b">(16%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#f59e0b">(14%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">4</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">19</span><span style="font-size:10px;color:#8b8fa8">/19</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">19</span><span style="font-size:10px;color:#8b8fa8">/19</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">19</span><span style="font-size:10px;color:#8b8fa8">/19</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td>
     </tr><tr>
-      <td><strong>NovoHamburgo</strong> </td>
+      <td><strong>NovoHamburgo</strong></td>
       <td style="text-align:center;color:#8b8fa8">23</td>
-      <td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#22c55e">(64%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#22c55e">(64%✓)</span></td><td style="text-align:center"><span style="font-weight:700">22</span> <span style="font-size:10px;color:#22c55e">(64%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(22%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">22</span><span style="font-size:10px;color:#8b8fa8">/22</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td>
     </tr><tr>
-      <td><strong>Pelotas</strong> </td>
+      <td><strong>Pelotas</strong></td>
       <td style="text-align:center;color:#8b8fa8">22</td>
-      <td style="text-align:center"><span style="font-weight:700">16</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">16</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">16</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(7%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span><span style="font-size:10px;color:#8b8fa8">/16</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span><span style="font-size:10px;color:#8b8fa8">/16</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span><span style="font-size:10px;color:#8b8fa8">/16</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td>
     </tr><tr>
-      <td><strong>BentoGonçalves</strong> </td>
+      <td><strong>BentoGonçalves</strong></td>
       <td style="text-align:center;color:#8b8fa8">21</td>
-      <td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">21</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">21</span><span style="font-size:10px;color:#8b8fa8">/21</span></td>
     </tr><tr>
-      <td><strong>Sarandi</strong> </td>
+      <td><strong>Sarandi</strong></td>
       <td style="text-align:center;color:#8b8fa8">16</td>
-      <td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">16</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">16</span><span style="font-size:10px;color:#8b8fa8">/16</span></td>
     </tr><tr>
-      <td><strong>Piracicaba</strong> </td>
+      <td><strong>Piracicaba</strong></td>
       <td style="text-align:center;color:#8b8fa8">17</td>
-      <td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">14</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">17</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">14</span><span style="font-size:10px;color:#8b8fa8">/14</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">17</span><span style="font-size:10px;color:#8b8fa8">/17</span></td>
     </tr><tr>
-      <td><strong>Recife</strong> </td>
+      <td><strong>Recife</strong></td>
       <td style="text-align:center;color:#8b8fa8">19</td>
-      <td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">19</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">19</span><span style="font-size:10px;color:#8b8fa8">/19</span></td>
     </tr><tr>
-      <td><strong>SantaRosa</strong> </td>
+      <td><strong>SantaRosa</strong></td>
       <td style="text-align:center;color:#8b8fa8">15</td>
-      <td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td>
     </tr><tr>
-      <td><strong>Cascavel</strong> </td>
+      <td><strong>Cascavel</strong></td>
       <td style="text-align:center;color:#8b8fa8">20</td>
-      <td style="text-align:center"><span style="font-weight:700">11</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">11</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">11</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">20</span> <span style="font-size:10px;color:#ef4444">(5%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">11</span><span style="font-size:10px;color:#8b8fa8">/11</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">11</span><span style="font-size:10px;color:#8b8fa8">/11</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">11</span><span style="font-size:10px;color:#8b8fa8">/11</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">20</span><span style="font-size:10px;color:#8b8fa8">/20</span></td>
     </tr><tr>
-      <td><strong>Cremers</strong> </td>
+      <td><strong>Cremers</strong></td>
       <td style="text-align:center;color:#8b8fa8">13</td>
-      <td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">13</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">13</span><span style="font-size:10px;color:#8b8fa8">/13</span></td>
     </tr><tr>
-      <td><strong>SerafinaCorrea</strong> </td>
+      <td><strong>SerafinaCorrea</strong></td>
       <td style="text-align:center;color:#8b8fa8">12</td>
-      <td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">12</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">12</span><span style="font-size:10px;color:#8b8fa8">/12</span></td>
     </tr><tr>
-      <td><strong>Sorocaba</strong> </td>
+      <td><strong>Sorocaba</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
-      <td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(44%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(44%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(44%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(44%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td>
     </tr><tr>
-      <td><strong>CampoNovo</strong> </td>
+      <td><strong>CampoNovo</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
-      <td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td>
     </tr><tr>
-      <td><strong>Ijuí</strong> </td>
+      <td><strong>Ijuí</strong></td>
       <td style="text-align:center;color:#8b8fa8">9</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(25%✓)</span></td><td style="text-align:center"><span style="font-weight:700">9</span> <span style="font-size:10px;color:#22c55e">(22%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">9</span><span style="font-size:10px;color:#8b8fa8">/9</span></td>
     </tr><tr>
-      <td><strong>Medianeira</strong> </td>
+      <td><strong>Medianeira</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td>
     </tr><tr>
-      <td><strong>Aracaju</strong> </td>
+      <td><strong>Aracaju</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td>
     </tr><tr>
-      <td><strong>SãoBorja</strong> </td>
+      <td><strong>SãoBorja</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td>
     </tr><tr>
-      <td><strong>FranciscoBeltrão</strong> </td>
+      <td><strong>FranciscoBeltrão</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td>
     </tr><tr>
-      <td><strong>RibeirãoPreto</strong> </td>
+      <td><strong>RibeirãoPreto</strong></td>
       <td style="text-align:center;color:#8b8fa8">7</td>
-      <td style="text-align:center"><span style="font-weight:700">7</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">7</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">7</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">7</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">7</span><span style="font-size:10px;color:#8b8fa8">/7</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">7</span><span style="font-size:10px;color:#8b8fa8">/7</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">7</span><span style="font-size:10px;color:#8b8fa8">/7</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">7</span><span style="font-size:10px;color:#8b8fa8">/7</span></td>
     </tr><tr>
-      <td><strong>Bahia</strong> </td>
+      <td><strong>Bahia</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#22c55e">(50%✓)</span></td><td style="text-align:center"><span style="font-weight:700">1</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">1</span><span style="font-size:10px;color:#8b8fa8">/1</span></td>
     </tr><tr>
-      <td><strong>AntonioPrado</strong> ⭐</td>
+      <td><strong>AntonioPrado</strong></td>
       <td style="text-align:center;color:#8b8fa8">6</td>
-      <td style="text-align:center"><span style="font-weight:700">6</span> <span style="font-size:10px;color:#22c55e">(100%✓)</span></td><td style="text-align:center"><span style="font-weight:700">6</span> <span style="font-size:10px;color:#22c55e">(100%✓)</span></td><td style="text-align:center"><span style="font-weight:700">6</span> <span style="font-size:10px;color:#22c55e">(100%✓)</span></td><td style="text-align:center"><span style="font-weight:700">6</span> <span style="font-size:10px;color:#22c55e">(100%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">6</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span><span style="font-size:10px;color:#8b8fa8">/6</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span><span style="font-size:10px;color:#8b8fa8">/6</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span><span style="font-size:10px;color:#8b8fa8">/6</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span><span style="font-size:10px;color:#8b8fa8">/6</span></td>
     </tr><tr>
-      <td><strong>DoisVizinhos</strong> </td>
+      <td><strong>DoisVizinhos</strong></td>
       <td style="text-align:center;color:#8b8fa8">11</td>
-      <td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#22c55e">(40%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#22c55e">(40%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#22c55e">(40%✓)</span></td><td style="text-align:center"><span style="font-weight:700">6</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">6</span><span style="font-size:10px;color:#8b8fa8">/6</span></td>
     </tr><tr>
-      <td><strong>Osório</strong> </td>
+      <td><strong>Osório</strong></td>
       <td style="text-align:center;color:#8b8fa8">15</td>
-      <td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">15</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">15</span><span style="font-size:10px;color:#8b8fa8">/15</span></td>
     </tr><tr>
-      <td><strong>SãoLuizGonzaga</strong> </td>
+      <td><strong>SãoLuizGonzaga</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
-      <td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td>
     </tr><tr>
-      <td><strong>CampoMourão</strong> </td>
+      <td><strong>CampoMourão</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
-      <td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">2</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">2</span><span style="font-size:10px;color:#8b8fa8">/2</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td>
     </tr><tr>
-      <td><strong>Paranavai</strong> </td>
+      <td><strong>Paranavai</strong></td>
       <td style="text-align:center;color:#8b8fa8">8</td>
-      <td style="text-align:center;color:#4b4f66">—</td><td style="text-align:center;color:#4b4f66">—</td><td style="text-align:center;color:#4b4f66">—</td><td style="text-align:center"><span style="font-weight:700">8</span> <span style="font-size:10px;color:#f59e0b">(12%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center;color:#3a3d52">—</td><td style="text-align:center;color:#3a3d52">—</td><td style="text-align:center;color:#3a3d52">—</td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">8</span><span style="font-size:10px;color:#8b8fa8">/8</span></td>
     </tr><tr>
-      <td><strong>VitóriaDeSantoAntão</strong> </td>
+      <td><strong>VitóriaDeSantoAntão</strong></td>
       <td style="text-align:center;color:#8b8fa8">5</td>
-      <td style="text-align:center"><span style="font-weight:700">1</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">1</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">1</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td><td style="text-align:center"><span style="font-weight:700">5</span> <span style="font-size:10px;color:#ef4444">(0%✓)</span></td>
-      <td style="text-align:center;color:#8b8fa8">0</td>
-      <td style="text-align:center"></td>
+      <td style="text-align:center"><span style="font-weight:700;color:#22c55e">1</span><span style="font-size:10px;color:#8b8fa8">/1</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">1</span><span style="font-size:10px;color:#8b8fa8">/1</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">1</span><span style="font-size:10px;color:#8b8fa8">/1</span></td><td style="text-align:center"><span style="font-weight:700;color:#22c55e">5</span><span style="font-size:10px;color:#8b8fa8">/5</span></td>
     </tr></tbody>
     </table>
   </div>
@@ -1024,9 +919,9 @@ tr:hover td{background:#1e2235}
 </div>
 
 <script>
-function showTab(id, btn) {
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+function showTab(id,btn){
+  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+id).classList.add('active');
   btn.classList.add('active');
 }
